@@ -90,4 +90,55 @@ defmodule Day3Test do
 
     assert Day3.sum_of_part_numbers(input) == 925
   end
+
+  test "find gear part numbers" do
+    input = """
+    467..114..
+    ...*......
+    ..35..633.
+    ......#...
+    617*......
+    .....+.58.
+    ..592.....
+    ......755.
+    ...$.*....
+    .664.598.. 
+    """
+
+    assert Day3.find_gear_part_numbers(input) == [[467, 35], [755, 598]]
+  end
+
+  test "find gear ratios" do
+    input = """
+    467..114..
+    ...*......
+    ..35..633.
+    ......#...
+    617*......
+    .....+.58.
+    ..592.....
+    ......755.
+    ...$.*....
+    .664.598.. 
+    """
+
+    assert Day3.find_gear_ratios(input) == [16345, 451_490]
+  end
+
+  test "calculate sum of gear ratios" do
+    input = """
+    467..114..
+    ...*......
+    ..35..633.
+    ......#...
+    617*......
+    .....+.58.
+    ..592.....
+    ......755.
+    ...$.*....
+    .664.598.. 
+    """
+
+    assert Day3.sum_of_gear_ratios(input) == 467_835
+  end
 end
